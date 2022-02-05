@@ -20,3 +20,6 @@ objeto.idade = 18;
 objeto.endereco = 'Rua Lima';
 
 console.log(objeto);
+
+//Module mode
+export default 1;

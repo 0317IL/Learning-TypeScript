@@ -33,3 +33,6 @@ function escolhaCor(cor: Cores): void {
 }
 
 escolhaCor(Cores.VERMELHO);
+
+//Module mode
+export default 1;

@@ -23,3 +23,6 @@ const upper = upperCase('a', 'b', 'c');
 console.log(resultado);
 console.log(result);
 console.log(upper);
+
+//Module mode
+export default 1;

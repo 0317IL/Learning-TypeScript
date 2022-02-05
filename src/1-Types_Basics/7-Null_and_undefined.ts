@@ -42,3 +42,6 @@ if (squareString === null) {
 } else {
   console.log(squareString);
 }
+
+//Module mode
+export default 1;
