@@ -1,13 +1,13 @@
+/* eslint-disable no-irregular-whitespace */
 /*
-  PUBLIC: É declarado por padrão e logo não precisa ser passado ao parâmetro.
-      É necessário quando for utlizar um atalho;
-  PRIVATE: É acessado somente onde é declarado, utilizado no encapsulamento;
-  READONLY: Só pode ser lido e não modificado;
+  PROTECTED: O protected age muito como o private, com a exceção de que
+      os membros declarados protected também podem ser acessados ​​nas
+      classes derivadas.
 */
 
 export class Empresa {
   public readonly nome: string;
-  private readonly colaboradores: Colaborador[] = []; //Acessado apenas nessa classe
+  protected readonly colaboradores: Colaborador[] = []; //Acessado apenas nessa classe
   protected readonly cnpj: string;
 
   constructor(nome: string, cnpj: string) {
@@ -26,6 +26,18 @@ export class Empresa {
   }
 }
 
+export class Google extends Empresa {
+  constructor() {
+    super('Google', '11.111.111/0001-11');
+  }
+
+  popColaborador(): Colaborador | null {
+    const colaborador = this.colaboradores.pop();
+    if (colaborador) return colaborador;
+    return null;
+  }
+}
+
 export class Colaborador {
   constructor(
     public readonly nome: string,
@@ -33,8 +45,7 @@ export class Colaborador {
   ) {}
 }
 
-const empresa = new Empresa('Google', '11.111.111/0001-11');
-
+const empresa = new Google();
 const colaborador = new Colaborador('Luis', 'Carlos');
 const colaborador2 = new Colaborador('Carlos', 'Luis');
 const colaborador3 = new Colaborador('Eduardo', 'Carlos');
@@ -44,11 +55,7 @@ empresa.addColaborador(colaborador);
 empresa.addColaborador(colaborador2);
 empresa.addColaborador(colaborador3);
 empresa.addColaborador(colaborador4);
-empresa.addColaborador({
-  nome: 'Flávio',
-  sobrenome: 'Boussas',
-});
+const result = empresa.popColaborador();
 
-empresa.showColaboradores();
-
+console.log(result);
 console.log(empresa);
