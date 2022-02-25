@@ -6,7 +6,7 @@ TypeScript que esse objeto nunca será alterado.*/
 let x = 10; //eslint-disable-line
 
 x = 120;
-x = 'Carlos'; // Ao atribuir um 'number' a variável não aceita uma 'string'
+//x = 'Carlos'; // Ao atribuir um 'number' a variável não aceita uma 'string'
 
 const y = 10;
 
@@ -24,7 +24,7 @@ const person2 = {
 };
 
 person.name = 'Luis';
-person2.name = 'Luis'; // Por ser como uma const o valor de name não pode mudar
+//person2.name = 'Luis'; // Por ser como uma const o valor de name não pode mudar
 
 //Module mode
 export default 1;

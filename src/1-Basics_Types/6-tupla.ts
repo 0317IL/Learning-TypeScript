@@ -11,7 +11,7 @@ const dados4: [number, string, ...string[]] = [4, 'João'];
 
 dados[0] = 100;
 dados[1] = 'Lurdes';
-dados[2] = 'Marcos'; //A tupla não aceita adição de valores.
+//dados[2] = 'Marcos'; //A tupla não aceita adição de valores.
 console.log(dados);
 
 dados2[2] = 'Marcos';

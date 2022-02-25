@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/3-Pratica_01/index.ts',
+  entry: './src/1-Types_Basics/Pratica_01/video.ts',
   module: {
     rules: [
       {

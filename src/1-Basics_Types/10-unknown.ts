@@ -10,7 +10,7 @@ x = 900;
 x = 10;
 const y = 800;
 
-console.log(x + y); //O unknown não aceita se não houver a checagem do tipo antes
+//console.log(x + y); //O unknown não aceita se não houver a checagem do tipo antes
 
 if (typeof x === 'number') console.log(x + y);
 
